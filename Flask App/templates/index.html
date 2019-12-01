@@ -1,0 +1,18 @@
+{% extends "page_base.html" %}
+{% import "_macros.html" as macros %}
+{% block page_content %}
+<br>
+<br>
+<center> <img src=" static\images\Home.jpg " height= "200" width="440" align="center" >
+</center>
+<br>
+<br>
+<center>
+<form>
+  <input align="center" type="text" name="query" width="440" autofocus>
+  <input type="submit" value="Search">
+</form>
+</center>
+{{ macros.pagination_widget(pages, 'index',query) }}
+
+{% endblock %}

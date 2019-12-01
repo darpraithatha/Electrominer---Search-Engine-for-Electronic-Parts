@@ -1,0 +1,22 @@
+{% extends "page_base.html" %}
+{% import "_macros.html" as macros %}
+{% block page_content %}
+<br>
+<br>
+<center>
+<form>
+  <input align="center" type="text" name="query" width="440" autofocus>
+  <input type="submit" value="Search">
+</form>
+</center>
+
+<br>
+<br>
+<p> Your search - c {{ query }} - did not match any documents. </p>
+<p> Suggestions: </p>
+<li> Make sure all words are spelled correctly. </li>
+<li> Try different keywords. </li>
+<li> Try more general keywords. </li>
+<li> Try fewer keywords. </li>
+{{ macros.pagination_widget(pages, 'index',query) }}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "page_base.html" %}
+{% import "_macros.html" as macros %}
+{% block page_content %}
+<br>
+<br>
+<center>
+<form>
+  <input type="text" name="query" autofocus>
+  <input type="submit" value="Search">
+</form>
+</center>
+<h3>Search reasults for {{ query }}</h3>
+{% for d in data_to_show %}
+<table style="width: auto">
+<tr>
+<td>
+<img href="{{ d['url'] }}" src=" {{ d['img_url'] }} " height="150" width= "250" auto style="float:center;"/>
+</td>
+<td style="float:center;">
+<a href="{{ d['url'] }}" target="_blank">{{ d['Name'] }}</a> <br>
+<a> {{ d['Description'] }}</a><br>
+<a style="font-weight: bold;"> Price: {{ d['Price'] }} </a>
+</td>
+</tr>
+</table>
+{% endfor%}
+{{ macros.pagination_widget(pages, 'index',query) }}
+{% endblock %}

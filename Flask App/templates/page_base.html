@@ -1,0 +1,26 @@
+{% extends "bootstrap4_base.html" %}
+{% block title %}Flask app{% endblock %}
+
+{% block navbar %}
+<header>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+            <a href="/?query=" class="navbar-brand d-flex align-items-center">
+                <strong>ELECTROMINER</strong>
+            </a>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<main role="main" class="container">
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning" role="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% block page_content %}{% endblock %}
+</main>
+{% endblock %}
