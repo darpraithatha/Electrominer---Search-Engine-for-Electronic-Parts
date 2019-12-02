@@ -1,4 +1,4 @@
-# Search-Engine-Electronics-Parts-
+# Electrominer - Search Engine For Electronics Parts 
 This Repository contains the codes and data for simple search engine designed particularly for Electronics Components.
 
 For this Project First we need the Crawled data for which the Electronic component sites Adafruit (https://www.adafruit.com/) and Sunrom (https://www.sunrom.com/) has been crawled. The code for the crawling are in the crawler folder.
